@@ -53,7 +53,7 @@ project-root/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/Ashish007j/Real-Time-Chat-application.git
+git clone https://github.com/Ashish007j/Real-Time-Chat-application.git chat-app
 cd chat-app
 ```
 
