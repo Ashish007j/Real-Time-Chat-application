@@ -53,7 +53,7 @@ project-root/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-username/chat-app.git
+git clone https://github.com/Ashish007j/Real-Time-Chat-application.git
 cd chat-app
 ```
 
@@ -72,12 +72,6 @@ npm run dev
 ```
 Frontend will start at **http://localhost:5173**
 
----
-
-## 📸 Screenshots (optional)
-_Add some UI screenshots here for better presentation._
-
----
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!  
