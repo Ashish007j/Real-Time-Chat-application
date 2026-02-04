@@ -87,13 +87,13 @@ const JoinCreateChat = () => {
         </div>
 
         <h1 className="text-2xl font-semibold text-center ">
-          Join Room / Create Room ..
+          💬 Start Chatting Now !
+
         </h1>
         {/* name div */}
         <div className="">
           <label htmlFor="name" className="block font-medium mb-2">
-            Your name
-          </label>
+             Name          </label>
           <input
             onChange={handleFormInputChange}
             value={detail.userName}
@@ -125,13 +125,13 @@ const JoinCreateChat = () => {
         <div className="flex justify-center gap-2 mt-4">
           <button
             onClick={joinChat}
-            className="px-3 py-2 dark:bg-blue-500 hover:dark:bg-blue-800 rounded-full"
+            className="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition duration-200"
           >
             Join Room
           </button>
           <button
             onClick={createRoom}
-            className="px-3 py-2 dark:bg-orange-500 hover:dark:bg-orange-800 rounded-full"
+            className="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition duration-200"
           >
             Create Room
           </button>

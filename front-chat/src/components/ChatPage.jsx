@@ -35,7 +35,7 @@ const ChatPage = () => {
   const [stompClient, setStompClient] = useState(null);
 
   //page init:
-  //messages ko load karne honge
+  //messages are loded.
 
   useEffect(() => {
     async function loadMessages() {
@@ -59,7 +59,7 @@ const ChatPage = () => {
         behavior: "smooth",
       });
     }
-  }, [messages]);
+  }, [messages]); 
 
   //stompClient ko init karne honge
   //subscribe
