@@ -1,27 +1,12 @@
-# Java 17 image
-FROM eclipse-temurin:17-jdk
-
-# App folder
+# ---------- BUILD STAGE ----------
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
-
-# Copy maven wrapper & pom
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-
-# Permission
-RUN chmod +x mvnw
-
-# Download dependencies (cache)
-RUN ./mvnw dependency:go-offline
-
-# Copy source
+COPY pom.xml .
 COPY src ./src
+RUN mvn clean package -DskipTests
 
-# Build app
-RUN ./mvnw clean package -DskipTests
-
-# Expose port
-EXPOSE 8080
-
-# Run app
-CMD ["java", "-jar", "target/*.jar"]
+# ---------- RUNTIME STAGE ----------
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
